@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>WCF.IAppService</AssemblyName>
+    <RootNamespace>WCF.IAppService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>..\..\..\..\Users\Lee\.nuget\packages\system.servicemodel.primitives\4.4.2\ref\netstandard2.0\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

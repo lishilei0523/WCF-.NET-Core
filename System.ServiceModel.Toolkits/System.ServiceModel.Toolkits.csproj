@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>System.ServiceModel.Toolkits</AssemblyName>
+    <RootNamespace>System.ServiceModel.Toolkits</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.configuration.configurationManager" Version="4.4.1" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.2" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.2" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.4.2" />
+  </ItemGroup>
+
+</Project>
