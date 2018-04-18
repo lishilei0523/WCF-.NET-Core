@@ -1,2 +1,2 @@
 # WCF-DotNetCore
-.NET Core调用WCF（不通过代理类）
+A library make .NET Core programs be able to call WCF server without proxy classes.
