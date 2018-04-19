@@ -11,7 +11,7 @@ namespace System.ServiceModel.Toolkits
     /// <summary>
     /// ChannelFactory管理者
     /// </summary>
-    public sealed class ChannelFactoryManager : IDisposable
+    internal sealed class ChannelFactoryManager : IDisposable
     {
         #region # 字段及构造器
 
