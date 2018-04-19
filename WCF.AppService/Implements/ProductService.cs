@@ -17,6 +17,10 @@ namespace WCF.AppService.Implements
         public string GetProducts()
         {
             Console.WriteLine("Hello World");
+
+            string header = OperationContext.Current.IncomingMessageHeaders.GetHeader<string>("headerName", "headerNs");
+            Console.WriteLine($"消息头：\"{header}\"");
+
             return "Hello World";
         }
 
