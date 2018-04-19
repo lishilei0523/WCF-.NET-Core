@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
 using WCF.IAppService.Interfaces;
 
 namespace WCF.AppService.Implements
@@ -18,8 +20,16 @@ namespace WCF.AppService.Implements
         {
             Console.WriteLine("Hello World");
 
-            string header = OperationContext.Current.IncomingMessageHeaders.GetHeader<string>("headerName", "headerNs");
-            Console.WriteLine($"消息头：\"{header}\"");
+            string headerName = "headerName";
+            string headerNs = "headerNs";
+
+            MessageHeaders headers = OperationContext.Current.IncomingMessageHeaders;
+
+            if (headers.Any(x => x.Name == headerName && x.Namespace == headerNs))
+            {
+                string header = headers.GetHeader<string>(headerName, headerNs);
+                Console.WriteLine($"消息头：\"{header}\"");
+            }
 
             return "Hello World";
         }
