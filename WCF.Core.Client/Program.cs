@@ -12,10 +12,10 @@ namespace WCF.Core.Client
     {
         static void Main(string[] args)
         {
-            //初始化容器
+            //Init Container
             IContainer container = InitContainer();
 
-            //调用
+            //Calling WCF
             IProductService productService = container.Resolve<IProductService>();
             string products = productService.GetProducts();
 
