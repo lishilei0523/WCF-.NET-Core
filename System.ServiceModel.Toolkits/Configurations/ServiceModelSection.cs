@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.ServiceModel.Toolkits.Configurations;
 
 // ReSharper disable once CheckNamespace
@@ -61,22 +60,6 @@ namespace System.ServiceModel
             }
             set { this["client"] = value; }
         }
-
-        public IDictionary<string, EndpointElement> EndpointElements
-        {
-            get
-            {
-                IDictionary<string, EndpointElement> endpointElements = new Dictionary<string, EndpointElement>();
-
-                foreach (EndpointElement endpoint in this.EndpointElementCollection)
-                {
-                    endpointElements.Add(endpoint.Name, endpoint);
-                }
-
-                return endpointElements;
-            }
-        }
-
         #endregion
     }
 }

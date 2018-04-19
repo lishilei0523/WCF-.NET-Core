@@ -13,13 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.ServiceModel.Toolkit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WCF.IAppService", "WCF.IAppService\WCF.IAppService.csproj", "{51316D71-036B-4FA5-83BE-1CA72DF0EB1C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.ServiceModel.Toolkits.Tests", "System.ServiceModel.Toolkits.Tests\System.ServiceModel.Toolkits.Tests.csproj", "{C3AF1EB8-1D40-4DB8-A22F-5C11DB21328B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - WCF.Server", "01 - WCF.Server", "{1814EBE8-A510-48D0-B0F9-BD628C8478F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - WCF.Core.Config", "03 - WCF.Core.Config", "{BA93C030-C93E-48CB-A335-4D14FA8E4BDC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - WCF.Core.Client", "02 - WCF.Core.Client", "{85B029DD-EA7B-45A9-8102-C4C0F1984150}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.ServiceModel.Toolkits.Tests", "System.ServiceModel.Toolkits.Tests\System.ServiceModel.Toolkits.Tests.csproj", "{A82A483D-A82B-4563-8852-7270A52DAA96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{51316D71-036B-4FA5-83BE-1CA72DF0EB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51316D71-036B-4FA5-83BE-1CA72DF0EB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51316D71-036B-4FA5-83BE-1CA72DF0EB1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3AF1EB8-1D40-4DB8-A22F-5C11DB21328B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3AF1EB8-1D40-4DB8-A22F-5C11DB21328B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3AF1EB8-1D40-4DB8-A22F-5C11DB21328B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3AF1EB8-1D40-4DB8-A22F-5C11DB21328B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A82A483D-A82B-4563-8852-7270A52DAA96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A82A483D-A82B-4563-8852-7270A52DAA96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A82A483D-A82B-4563-8852-7270A52DAA96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A82A483D-A82B-4563-8852-7270A52DAA96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,7 +61,7 @@ Global
 		{47976E8D-A353-4202-AD0B-675E0FEB6FDA} = {1814EBE8-A510-48D0-B0F9-BD628C8478F0}
 		{0D35F320-9870-43F7-B5CB-46DBC5095CE6} = {BA93C030-C93E-48CB-A335-4D14FA8E4BDC}
 		{51316D71-036B-4FA5-83BE-1CA72DF0EB1C} = {1814EBE8-A510-48D0-B0F9-BD628C8478F0}
-		{C3AF1EB8-1D40-4DB8-A22F-5C11DB21328B} = {BA93C030-C93E-48CB-A335-4D14FA8E4BDC}
+		{A82A483D-A82B-4563-8852-7270A52DAA96} = {BA93C030-C93E-48CB-A335-4D14FA8E4BDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0B7B332-A863-48B5-BB92-F45D81FED18E}

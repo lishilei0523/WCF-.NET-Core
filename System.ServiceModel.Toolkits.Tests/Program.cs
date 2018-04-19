@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel.Toolkits.Configurations;
+using System.ServiceModel.Toolkits.Toolkits;
 
 namespace System.ServiceModel.Toolkits.Tests
 {
@@ -6,9 +7,7 @@ namespace System.ServiceModel.Toolkits.Tests
     {
         static void Main(string[] args)
         {
-            ServiceModelSection wcfSetting = ServiceModelSection.Setting;
-
-            foreach (EndpointElement endpoint in wcfSetting.EndpointElements.Values)
+            foreach (EndpointElement endpoint in ConfigMediator.EndpointElements.Values)
             {
                 Console.WriteLine(endpoint.Name);
                 Console.WriteLine(endpoint.Contract);
