@@ -1,4 +1,4 @@
-﻿using Autofac;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,21 +13,20 @@ namespace WCF.Core.Client
         static void Main(string[] args)
         {
             //Init Container
-            IContainer container = InitContainer();
+            IServiceProvider serviceProvider = InitServiceProvider();
 
             //Calling WCF
-            IProductService productService = container.Resolve<IProductService>();
+            IProductService productService = serviceProvider.GetService<IProductService>();
             string products = productService.GetProducts();
 
             Console.WriteLine(products);
-
-            container.Dispose();
             Console.ReadKey();
         }
 
-        static IContainer InitContainer()
+        static IServiceProvider InitServiceProvider()
         {
-            ContainerBuilder builder = new ContainerBuilder();
+            ServiceCollection serviceCollection = new ServiceCollection();
+
             Assembly wcfInterfaceAssembly = Assembly.Load("WCF.IAppService");
 
             //获取WCF接口类型集
@@ -42,13 +41,11 @@ namespace WCF.Core.Client
                 Type proxyType = proxyGenericType.MakeGenericType(type);
                 PropertyInfo propChannel = proxyType.GetProperty(ServiceProxy.ChannelPropertyName, type);
 
-                builder.RegisterType(proxyType).OnRelease(proxy => ((IDisposable)proxy).Dispose());
-                builder.Register(container => propChannel.GetValue(container.Resolve(proxyType))).
-                    As(type).
-                    OnRelease(channel => channel.CloseChannel());
+                serviceCollection.AddTransient(proxyType, proxyType);
+                serviceCollection.AddTransient(type, factory => propChannel.GetValue(factory.GetService(proxyType)));
             }
 
-            return builder.Build();
+            return serviceCollection.BuildServiceProvider();
         }
     }
 }
