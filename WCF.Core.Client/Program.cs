@@ -16,16 +16,19 @@ namespace WCF.Core.Client
             IServiceProvider serviceProvider = InitServiceProvider();
 
             //Calling WCF
-            IProductService productService = serviceProvider.GetService<IProductService>();
-            string products = productService.GetProducts();
+            using (IServiceScope serviceScope = serviceProvider.CreateScope())
+            {
+                IProductService productService = serviceScope.ServiceProvider.GetService<IProductService>();//This is a remote interface
+                string products = productService.GetProducts();
+                Console.WriteLine(products);
+            }
 
-            Console.WriteLine(products);
             Console.ReadKey();
         }
 
         static IServiceProvider InitServiceProvider()
         {
-            ServiceCollection serviceCollection = new ServiceCollection();
+            IServiceCollection serviceCollection = new ServiceCollection();
 
             Assembly wcfInterfaceAssembly = Assembly.Load("WCF.IAppService");
 

@@ -5,11 +5,14 @@ A library makes .NET Core programs be able to call WCF server without proxy clas
     {
         //Init Container
         IServiceProvider serviceProvider = InitServiceProvider();
-
-        //Calling WCF
-        IProductService productService = serviceProvider.GetService<IProductService>();//This is a remote interface
-        string products = productService.GetProducts();
-
-        Console.WriteLine(products);
+		
+		//Calling WCF
+        using (IServiceScope serviceScope = serviceProvider.CreateScope())
+        {
+            IProductService productService = serviceScope.ServiceProvider.GetService<IProductService>();//This is a remote interface
+            string products = productService.GetProducts();
+            Console.WriteLine(products);
+        }
+        
         Console.ReadKey();
     }
