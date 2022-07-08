@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="System.configuration.configurationManager" Version="4.4.1" />
     <PackageReference Include="System.Private.ServiceModel" Version="4.4.2" />
-    <PackageReference Include="System.ServiceModel.Http" Version="4.4.2" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.4" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.2" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="4.4.2" />
   </ItemGroup>
