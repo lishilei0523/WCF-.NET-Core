@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.0-preview2-final" />
-    <PackageReference Include="System.Private.ServiceModel" Version="4.4.2" />
+    <PackageReference Include="System.Private.ServiceModel" Version="4.4.4" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.2" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.2" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="4.4.2" />
